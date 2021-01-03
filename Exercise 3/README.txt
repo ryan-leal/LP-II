@@ -1,0 +1,4 @@
+Antes de executar o programa, caso queira modificar a porta utiliada, basta definir no início do arquivo "main.c", se não modificar, a padrão será 9999 (e em caso de erro durante a associação com a porta, mude a porta). Para executar o programa, abra o terminal na pasta com o arquivo main.c e tenha instalado a ferramenta netcat (ou telnet, fica a seu critério), feito isto, execute o comando entre aspas: "gcc main.c -pthread -o main" (necessário suporte a biblioteca pthread.h), feito isso, execute o programa usando: "./main".
+Com o programa executado e o servidor iniciado, abra outro terminal e execute: "nc localhost PORTA", substituindo PORTA pela porta selecionada (padrão 9999), assim você conseguirá conectar um cliente usando netcat facilmente, podendo utilizar mais de um.
+
+OBS: Nas imagens temos um exemplo de execução com 6 Clientes simultâneos e a execuções dos comandos de saída e desligamento.
